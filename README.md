@@ -1,14 +1,40 @@
-### Set Up
+## Setup
 
-To get started, fork this repo.
-Then clone the forked repo to begin work on your machine.
-Once that is complete, cd into ‘summing-grid’ and run yarn install and then yarn start. The app should start running on http://localhost:3000.
+**You may fork these repo or download a local copy.**
+
+### With React
+
+If you'd like to use React, this repo is set up with `create-react-app`.
+
+1. Fork or download a local copy of this repo.
+2. Run `yarn` in the repo root.
+3. `cd` into `summing-grid` and run `yarn` to install dependencies.
+4. Run scrips from `summing-grid/package.json` to test or run your application.
+
+### With your own framework
+
+You may use a framework of your choice to complete this task.
+The root `package.json` in this repo can be adjusted to install whatever dependencies you need.
+
+## Submission
+
+### For github forks
+
+Commit and push your code to your forked repo. Open a pull request against this repo and let us know.
+
+### For downloads
+
+Send a zip file of your completed exercise to your contact at CB Insights.
+
+----
+
+## Your task
 
 Your task will be to create a 1x4 flexible grid. The first 3 spaces in the grid should contain input fields that accept numbers. The 4th space in the grid will display the sum of the numbers in the first 3 spaces.
 
 ### The grid
 
-The grid should have 1 row and 4 columns. The width of each column should be 25% of the window size. This width must be maintained even if the page is resized. The border of the grid must be 1px black.
+The grid should have 1 row and 4 columns. The width of each column should be 25% of the window width. This width must be maintained even if the page is resized. The border of the grid must be 1px black.
 
 Perform the following operations based on the value of window size:
 
@@ -22,10 +48,10 @@ The first 3 input fields should each accept a number. Then write code which sums
 ### Extra Credit
 
 Add validation to the input fields to ensure that the entered values are numbers. Also ensure that entering non-number values does not break the other functionality or cause any errors.
-
 Add some unit tests (you may want to install additional node modules).
 
-
-### Submission
-
-When you are done, make sure your code is committed and pushed to your forked repo on github.com. Then open a pull request back into our repo and let us know.
+**As you build this app, consider...**
+- How data should flow between components
+- Which components could be built to be reusable
+- How to style the grid so that it's easy to add or remove input cells
+- How number formatting should handle edge cases
