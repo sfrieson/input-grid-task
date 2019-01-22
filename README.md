@@ -34,7 +34,7 @@ Your task will be to create a 1x4 flexible grid. The first 3 spaces in the grid 
 
 ### The grid
 
-The grid should have 1 row and 4 columns. The width of each column should be 25% of the window width. This width must be maintained even if the page is resized. The border of the grid must be 1px black.
+The grid should have 1 row and 4 columns. By default, the width of each column should be 25% of the window width. The border of the grid must be 1px black.
 
 Perform the following operations based on the value of window size:
 
