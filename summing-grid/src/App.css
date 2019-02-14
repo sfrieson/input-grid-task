@@ -27,6 +27,13 @@
   border: 1px solid black;
   box-sizing: border-box;
   flex: 0 0 100%;
+  padding: 0.25em;
+}
+
+.grid-cell__input {
+  border: none;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 @media (min-width: 360px) {
@@ -38,4 +45,17 @@
   .grid-cell {
     flex-basis: 50%;
   }
+}
+
+.number-display {
+  text-align: right;
+}
+
+/* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
 }
