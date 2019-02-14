@@ -8,6 +8,7 @@ const inputs = [
   {name: 'cell2', label: 'Cell 2'},
   {name: 'cell3', label: 'Cell 3'}
 ];
+const fieldValidationRE = /^\d*$/;
 
 class App extends Component {
   constructor (props) {
@@ -22,7 +23,7 @@ class App extends Component {
   }
 
   handleChange ({ target }) {
-    this.setState({[target.name]: target.value});
+    if (fieldValidationRE.test(target.value)) this.setState({[target.name]: target.value});
   }
 
   render () {
