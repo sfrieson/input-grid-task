@@ -33,7 +33,14 @@
 .grid-cell__input {
   border: none;
   box-sizing: border-box;
+  font-size: 1em;
+  line-height: 1;
+  padding: 0;
   width: 100%;
+}
+
+.grid-cell--display {
+  background-color: #eee;
 }
 
 @media (min-width: 360px) {
@@ -43,7 +50,7 @@
 }
 @media (min-width: 720px) {
   .grid-cell {
-    flex-basis: 50%;
+    flex-basis: 25%;
   }
 }
 

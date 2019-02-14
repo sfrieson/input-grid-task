@@ -39,3 +39,14 @@ test('it includes the correct unit', () => {
 test('shows more than three digits after 999 trillion', () => {
   expect(formatNumber(1234567890123456)).toEqual('1,234T');
 });
+
+test('works for edge cases', () => {
+  expect(formatNumber(1)).toEqual('1');
+  expect(formatNumber(0)).toEqual('0');
+});
+
+test('works for negative numbers', () => {
+  expect(formatNumber(-1)).toEqual('-1');
+  expect(formatNumber(-123)).toEqual('-123');
+  expect(formatNumber(-1234)).toEqual('-1.23k');
+})

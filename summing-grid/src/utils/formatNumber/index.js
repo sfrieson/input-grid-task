@@ -13,21 +13,26 @@ const divisors = [
 
 export default function (num) {
   num = Math.round(num);
-  if (num === 0) return 0;
+  if (num === 0) return '0';
 
   let divisor;
   let i = 0;
-  while (divisors[i] && Math.abs(num) > divisors[i].value) {
+  while (divisors[i] && Math.abs(num) >= divisors[i].value) {
     divisor = divisors[i];
     i++;
   }
 
   num /= divisor.value;
+
+  // Number.prototype.toLocaleString() has pretty good browser compatibility
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString#Browser_compatibility
   const stringNum = num.toLocaleString();
   const decimalPosition = stringNum.indexOf('.');
   let sliceEnd = null;
-  if (decimalPosition === -1 || decimalPosition === 3) sliceEnd = 3;
-  else if (decimalPosition < 3) sliceEnd = 4;
+  const minusSignPosition = num < 0 ? 1 : 0;
+
+  if (decimalPosition === -1 || decimalPosition === 3 + minusSignPosition) sliceEnd = 3 + minusSignPosition;
+  else if (decimalPosition < 3 + minusSignPosition) sliceEnd = 4 + minusSignPosition;
   else sliceEnd = decimalPosition;
 
   return stringNum.slice(0, sliceEnd) + divisor.symbol;
