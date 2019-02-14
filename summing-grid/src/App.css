@@ -16,3 +16,26 @@
 .App-intro {
   font-size: large;
 }
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.grid-cell {
+  border: 1px solid black;
+  box-sizing: border-box;
+  flex: 0 0 100%;
+}
+
+@media (min-width: 360px) {
+  .grid-cell {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 720px) {
+  .grid-cell {
+    flex-basis: 50%;
+  }
+}
